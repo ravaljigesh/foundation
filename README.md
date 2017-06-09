@@ -5,3 +5,6 @@ IT-Innovator foundation is useful directory for those who wants to start a new L
 - Ready Authentication for Admin and User (Tutorial https://jigesh.com/2017/06/08/laravel-5-separate-authentication-admin-users/)
 - Theme base view stucture for admin and front
 - Additional classes and organized structure for your application
+
+#Instllation
+composer create-project itinnovator/foundation YouProjectName dev-master
