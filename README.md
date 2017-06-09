@@ -6,5 +6,5 @@ IT-Innovator foundation is useful directory for those who wants to start a new L
 - Theme base view stucture for admin and front
 - Additional classes and organized structure for your application
 
-#Instllation
+# Installation
 composer create-project itinnovator/foundation YouProjectName dev-master
