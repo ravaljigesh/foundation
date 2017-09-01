@@ -3,7 +3,7 @@ IT-Innovator foundation is useful directory for those who wants to start a new L
 
 # What additional than default Laravel ?
 - Ready Authentication for Admin and User (Tutorial https://jigeshraval.com/2017/06/08/laravel-5-separate-authentication-admin-users/)
-- Different theme for Laravel and Admin
+- Different theme for Front end and Admin
 - Additional classes and well-organized structure for your application
 
 We're aiming to faster the process of development while actually writing codes.
