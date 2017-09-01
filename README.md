@@ -10,6 +10,6 @@ IT-Innovator foundation is useful directory for those who wants to start a new L
 composer create-project itinnovator/foundation YouProjectName dev-master
 
 # Added Flavor
-New Helper Functions
-Multi-Language for Laravel 5.5
-Multi-linguagual routes for Laravel 5.5
+- New Helper Functions
+- Multi-Language for Laravel 5.5
+- Multi-linguagual routes for Laravel 5.5
