@@ -6,6 +6,8 @@ class Core
 {
     public $scope;
 
+    public $lang = 'en';
+
     public function url($url)
     {
         if ($this->scope == 'admin') {

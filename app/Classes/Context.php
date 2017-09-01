@@ -11,20 +11,30 @@ class Context
 {
     protected static $instance;
 
-    public $core;
+    protected $core;
 
-    public $form;
+    protected $form;
 
-    public $link;
+    protected $link;
 
-    public $admin_user;
+    protected $admin_user;
 
-    public function __construct()
+    protected $lang;
+
+    public function __get($property)
     {
-        $this->core = new Core;
-        $this->form = new Form;
-        $this->link = new Link;
-        $this->admin_user = new AdminUser;
+        $property = explode('_', $property);
+        if (count($property)) {
+          $new_property = '';
+          foreach ($property as $prop) {
+            $new_property .= ucfirst($prop);
+          }
+          $property = $new_property;
+        }
+        $method = 'get'.ucfirst($property); // getStatus
+        if (method_exists($this, $method)) {
+          return $this->$method();
+        }
     }
 
     public static function getContext()
@@ -35,4 +45,66 @@ class Context
 
         return self::$instance;
     }
+
+    /**
+     * Get the value of Instance
+     *
+     * @return mixed
+     */
+    public function getInstance()
+    {
+        return $this->instance;
+    }
+
+    /**
+     * Get the value of Core
+     *
+     * @return mixed
+     */
+    public function getCore()
+    {
+        return $this->core = new \App\Classes\Core;
+    }
+
+    /**
+     * Get the value of Form
+     *
+     * @return mixed
+     */
+    public function getForm()
+    {
+        return $this->form = new \App\Classes\Form;
+    }
+
+    /**
+     * Get the value of Link
+     *
+     * @return mixed
+     */
+    public function getLink()
+    {
+        return $this->link = new \App\Classes\Link;
+    }
+
+    /**
+     * Get the value of Admin User
+     *
+     * @return mixed
+     */
+    public function getAdminUser()
+    {
+        return $this->admin_user = new \App\Objects\AdminUser;
+    }
+
+
+    /**
+     * Get the value of Lang
+     *
+     * @return mixed
+     */
+    public function getLang()
+    {
+        return $this->lang = new \App\Objects\Lang;
+    }
+
 }
