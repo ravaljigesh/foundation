@@ -13,3 +13,4 @@ composer create-project itinnovator/foundation YouProjectName dev-master
 - New Helper Functions
 - Multi-Language for Laravel 5.5
 - Multi-linguagual routes for Laravel 5.5
+- Form class to generate and Manage form throughout the application (Combpatible with controller and blade template)
