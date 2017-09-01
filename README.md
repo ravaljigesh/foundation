@@ -8,3 +8,6 @@ IT-Innovator foundation is useful directory for those who wants to start a new L
 
 # Installation
 composer create-project itinnovator/foundation YouProjectName dev-master
+
+# Added Flavor
+New Helper Functions
