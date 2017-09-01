@@ -1,5 +1,5 @@
-# IT-Innovator Foundation
-IT-Innovator foundation is useful directory for those who wants to start a new Laravel project with latest version.
+# Adlara
+Adlara is useful directory for those who wants to start a new Laravel project with latest version.
 
 # What additional than default Laravel ?
 - Ready Authentication for Admin and User (Tutorial https://jigeshraval.com/2017/06/08/laravel-5-separate-authentication-admin-users/)
