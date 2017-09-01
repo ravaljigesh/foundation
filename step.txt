@@ -1,0 +1,4 @@
+1) Fork
+2) run composer update
+3) create .env file and copy content from .evn.example 
+4) php artisan key:generate
