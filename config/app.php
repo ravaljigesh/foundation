@@ -93,6 +93,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Locales
+    |--------------------------------------------------------------------------
+    |
+    | List of application locales
+    |
+    */
+
+    'locales' => [
+      'en', 'gu', 'hi'
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Encryption Key
     |--------------------------------------------------------------------------
     |
@@ -224,7 +237,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Context' => App\Classes\Context::class,
+        'IDB' => App\Objects\IDB::class
     ],
 
 ];

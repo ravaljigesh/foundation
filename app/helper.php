@@ -58,3 +58,13 @@ function getView($view, $view_type = null)
 
     return 'admin/' . config('settings.admin_theme') . '/templates/' . $view;
 }
+
+/**
+ * Return url with admin path
+ * @param [string] $url path
+ */
+
+function AdminURL($url)
+{
+    return url(config('settings.admin_path') . '/' . $url);
+}

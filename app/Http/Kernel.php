@@ -33,13 +33,17 @@ class Kernel extends HttpKernel
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class
         ],
 
         'api' => [
             'throttle:60,1',
             'bindings',
         ],
+
+        'language' => [
+          \App\Http\Middleware\Language::class,
+        ]
     ];
 
     /**
@@ -58,5 +62,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'admins' => \App\Http\Middleware\AdminAuthenticate::class,
         'adminguest' => \App\Http\Middleware\AdminGuest::class,
+        'language' => \App\Http\Middleware\Language::class,
     ];
 }

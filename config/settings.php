@@ -42,4 +42,6 @@ return [
     'img_abs' => storage_path('media/img'),
 
     'video_abs' => storage_path('media/video'),
+
+    'multilingual' => true
 ];
