@@ -3,8 +3,10 @@ IT-Innovator foundation is useful directory for those who wants to start a new L
 
 # What additional than default Laravel ?
 - Ready Authentication for Admin and User (Tutorial https://jigeshraval.com/2017/06/08/laravel-5-separate-authentication-admin-users/)
-- Theme base view stucture for admin and front
-- Additional classes and organized structure for your application
+- Different theme for Laravel and Admin
+- Additional classes and well-organized structure for your application
+
+We're aiming to faster the process of development while actually writing codes.
 
 # Installation
 composer create-project itinnovator/foundation YouProjectName dev-master
