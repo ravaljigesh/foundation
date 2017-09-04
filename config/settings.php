@@ -29,6 +29,10 @@ return [
 
     'js_url' => 'themes/front/itinnovator-default/assets/js/',
 
+    'global_js_url' => 'storage/assets/js',
+
+    'global_css_url' => 'storage/assets/css',
+
     'admin_js_url' => 'themes/admin/itinnovator/assets/js/',
 
     'media_url' => 'storage/media/',
