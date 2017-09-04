@@ -58,6 +58,7 @@ class FrontController extends Controller
         $this->addJS('//code.jquery.com/jquery-3.2.1.min.js');
         $this->addJS('//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js');
         $this->addJS('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js');
+        $this->addJS($this->context->link->getJSLink('vue.js', true));
         $this->addJS($this->context->link->getJSLink('core.js'));
 
         return $this->js_files;
