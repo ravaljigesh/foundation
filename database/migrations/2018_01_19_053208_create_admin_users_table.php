@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAddressTable extends Migration
+class CreateAdminUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,16 @@ class CreateAddressTable extends Migration
      */
     public function up()
     {
-        Schema::create('address', function (Blueprint $table) {
+        Schema::create('admin_users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('location');
-            $table->string('address1');
-            $table->string('address2');
-            $table->string('city');
-            $table->string('state');
-            $table->integer('zip');
-            $table->string('lat');
-            $table->string('lng');
-            $table->string('place_id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('password');
+            $table->string('mobile');
+            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
+			$table->engine = 'InnoDB';
         });
     }
 
@@ -36,6 +33,6 @@ class CreateAddressTable extends Migration
      */
     public function down()
     {
-        Schema::drop('address');
+        Schema::dropIfExists('admin_users');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdminNotificationsTable extends Migration
+class CreateConfigurationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateAdminNotificationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('admin_notification', function (Blueprint $table) {
+        Schema::create('configuration', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('detail');
-            $table->integer('status');
+            $table->string('value');
             $table->timestamps();
             $table->softDeletes();
+			$table->engine = 'InnoDB';
         });
     }
 
@@ -30,6 +30,6 @@ class CreateAdminNotificationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('admin_notification');
+        Schema::dropIfExists('configuration');
     }
 }

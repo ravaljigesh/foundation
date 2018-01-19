@@ -13,12 +13,16 @@ class CreateJobsTable extends Migration
      */
     public function up()
     {
-        Schema::create('failed_jobs', function (Blueprint $table) {
+        Schema::create('jobs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('connection');
-            $table->text('queue');
+            $table->string('queue', 250)->index();
             $table->longText('payload');
-            $table->timestamps('failed_at');
+            $table->unsignedTinyInteger('attempts');
+            $table->unsignedTinyInteger('reserved')->index();
+            $table->unsignedInteger('reserved_at')->index();
+            $table->unsignedInteger('available_at');
+            $table->unsignedInteger('created_at');
+			$table->engine = 'InnoDB';
         });
     }
 
@@ -29,6 +33,6 @@ class CreateJobsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('failed_jobs');
+        Schema::dropIfExists('jobs');
     }
 }

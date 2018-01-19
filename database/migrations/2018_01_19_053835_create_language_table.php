@@ -16,10 +16,11 @@ class CreateLanguageTable extends Migration
         Schema::create('language', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('iso_code')->index();
+            $table->string('iso_code', 250)->index();
             $table->integer('status');
             $table->timestamps();
             $table->softDeletes();
+			$table->engine = 'InnoDB';
         });
     }
 
@@ -30,6 +31,6 @@ class CreateLanguageTable extends Migration
      */
     public function down()
     {
-        Schema::drop('language');
+        Schema::dropIfExists('language');
     }
 }

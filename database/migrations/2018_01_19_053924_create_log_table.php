@@ -21,6 +21,7 @@ class CreateLogTable extends Migration
             $table->integer('line');
             $table->timestamps();
             $table->softDeletes();
+			$table->engine = 'InnoDB';
         });
     }
 
@@ -31,6 +32,6 @@ class CreateLogTable extends Migration
      */
     public function down()
     {
-        Schema::drop('log');
+        Schema::dropIfExists('log');
     }
 }
