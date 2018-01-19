@@ -5,10 +5,10 @@ $m--root-font: (
         desktop: 13px,
         tablet: 13px,
         mobile: 13px
-    ), 
-    weight: 300, 
+    ),
+    weight: 300,
     color: (
-        light: #333333, 
+        light: #333333,
         dark: #efefef
     )
 );
@@ -10792,7 +10792,7 @@ b, strong {
     margin-left: -162.5px; }
   .m-dropdown.m-dropdown--align-center.m-dropdown--large .m-dropdown__wrapper {
     width: 380px;
-    margin-left: -190px; }
+    margin-left: -270px; }
   .m-dropdown.m-dropdown--align-center.m-dropdown--huge .m-dropdown__wrapper {
     width: 455px;
     margin-left: -227.5px; }
@@ -19437,7 +19437,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--solid > span {
@@ -19468,7 +19468,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--brand.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--brand.m-checkbox--solid > span {
@@ -19498,7 +19498,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--metal.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--metal.m-checkbox--solid > span {
@@ -19528,7 +19528,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--light.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--light.m-checkbox--solid > span {
@@ -19558,7 +19558,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--accent.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--accent.m-checkbox--solid > span {
@@ -19588,7 +19588,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--focus.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--focus.m-checkbox--solid > span {
@@ -19618,7 +19618,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--primary.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--primary.m-checkbox--solid > span {
@@ -19648,7 +19648,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--success.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--success.m-checkbox--solid > span {
@@ -19678,7 +19678,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--info.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--info.m-checkbox--solid > span {
@@ -19708,7 +19708,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--warning.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--warning.m-checkbox--solid > span {
@@ -19738,7 +19738,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--danger.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--danger.m-checkbox--solid > span {
@@ -19777,7 +19777,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--solid > span {
@@ -19810,7 +19810,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--brand.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--brand.m-radio--solid > span {
@@ -19842,7 +19842,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--metal.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--metal.m-radio--solid > span {
@@ -19874,7 +19874,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--light.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--light.m-radio--solid > span {
@@ -19906,7 +19906,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--accent.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--accent.m-radio--solid > span {
@@ -19938,7 +19938,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--focus.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--focus.m-radio--solid > span {
@@ -19970,7 +19970,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--primary.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--primary.m-radio--solid > span {
@@ -20002,7 +20002,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--success.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--success.m-radio--solid > span {
@@ -20034,7 +20034,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--info.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--info.m-radio--solid > span {
@@ -20066,7 +20066,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--warning.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--warning.m-radio--solid > span {
@@ -20098,7 +20098,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--danger.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--danger.m-radio--solid > span {
@@ -20137,7 +20137,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--solid > span {
@@ -20168,7 +20168,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--brand.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--brand.m-checkbox--solid > span {
@@ -20198,7 +20198,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--metal.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--metal.m-checkbox--solid > span {
@@ -20228,7 +20228,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--light.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--light.m-checkbox--solid > span {
@@ -20258,7 +20258,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--accent.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--accent.m-checkbox--solid > span {
@@ -20288,7 +20288,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--focus.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--focus.m-checkbox--solid > span {
@@ -20318,7 +20318,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--primary.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--primary.m-checkbox--solid > span {
@@ -20348,7 +20348,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--success.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--success.m-checkbox--solid > span {
@@ -20378,7 +20378,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--info.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--info.m-checkbox--solid > span {
@@ -20408,7 +20408,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--warning.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--warning.m-checkbox--solid > span {
@@ -20438,7 +20438,7 @@ body.m-portlet--fullscreen {
   .m-checkbox.m-checkbox--skin-dark.m-checkbox--danger.m-checkbox--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-checkbox.m-checkbox--skin-dark.m-checkbox--danger.m-checkbox--solid > span {
@@ -20477,7 +20477,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--solid > span {
@@ -20510,7 +20510,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--brand.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--brand.m-radio--solid > span {
@@ -20542,7 +20542,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--metal.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--metal.m-radio--solid > span {
@@ -20574,7 +20574,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--light.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--light.m-radio--solid > span {
@@ -20606,7 +20606,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--accent.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--accent.m-radio--solid > span {
@@ -20638,7 +20638,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--focus.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--focus.m-radio--solid > span {
@@ -20670,7 +20670,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--primary.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--primary.m-radio--solid > span {
@@ -20702,7 +20702,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--success.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--success.m-radio--solid > span {
@@ -20734,7 +20734,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--info.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--info.m-radio--solid > span {
@@ -20766,7 +20766,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--warning.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--warning.m-radio--solid > span {
@@ -20798,7 +20798,7 @@ body.m-portlet--fullscreen {
   .m-radio.m-radio--skin-dark.m-radio--danger.m-radio--solid {
     /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
     .m-radio.m-radio--skin-dark.m-radio--danger.m-radio--solid > span {
@@ -20841,7 +20841,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-brand.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-brand.m-checkbox--solid > span {
@@ -20880,7 +20880,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-brand.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-brand.m-radio--solid > span {
@@ -20919,7 +20919,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-metal.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-metal.m-checkbox--solid > span {
@@ -20958,7 +20958,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-metal.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-metal.m-radio--solid > span {
@@ -20997,7 +20997,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-light.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-light.m-checkbox--solid > span {
@@ -21036,7 +21036,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-light.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-light.m-radio--solid > span {
@@ -21075,7 +21075,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-accent.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-accent.m-checkbox--solid > span {
@@ -21114,7 +21114,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-accent.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-accent.m-radio--solid > span {
@@ -21153,7 +21153,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-focus.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-focus.m-checkbox--solid > span {
@@ -21192,7 +21192,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-focus.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-focus.m-radio--solid > span {
@@ -21231,7 +21231,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-primary.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-primary.m-checkbox--solid > span {
@@ -21270,7 +21270,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-primary.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-primary.m-radio--solid > span {
@@ -21309,7 +21309,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-success.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-success.m-checkbox--solid > span {
@@ -21348,7 +21348,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-success.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-success.m-radio--solid > span {
@@ -21387,7 +21387,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-info.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-info.m-checkbox--solid > span {
@@ -21426,7 +21426,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-info.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-info.m-radio--solid > span {
@@ -21465,7 +21465,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-warning.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-warning.m-checkbox--solid > span {
@@ -21504,7 +21504,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-warning.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-warning.m-radio--solid > span {
@@ -21543,7 +21543,7 @@ body.m-portlet--fullscreen {
 .m-checkbox.m-checkbox--state-danger.m-checkbox--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-checkbox.m-checkbox--state-danger.m-checkbox--solid > span {
@@ -21582,7 +21582,7 @@ body.m-portlet--fullscreen {
 .m-radio.m-radio--state-danger.m-radio--solid {
   /*
         &:hover > input:not([disabled]) ~ span {
-            background: $color-solid-bg-hover; 
+            background: $color-solid-bg-hover;
         }
         */ }
   .m-radio.m-radio--state-danger.m-radio--solid > span {
@@ -33968,3 +33968,63 @@ body.m-content--skin-light2 {
       text-align: center;
       float: none;
       margin: 0 auto; } }
+
+._hNotify {
+  left: auto !Important;
+  right: 90px;
+}
+
+.section_header_bg {
+  position: relative;
+  padding-bottom: 100px;
+  background: url(../../../../../storage/media/image/bg.jpg) center top no-repeat;
+  background-attachment: fixed;
+}
+
+.intro__title {
+  margin: 0 0 41px;
+  padding: 20px 0;
+  font-size: 23px;
+  line-height: 35px;
+  font-family: "poppinsregular";
+  font-weight: 400;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.11);
+  text-align: center;
+}
+
+.section_header_bg .content {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.intro {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.intro IMG {
+    margin-bottom: 37px;
+}
+
+.login__form {
+  margin-top: -100px;
+}
