@@ -1,66 +1,49 @@
 @extends('layouts.login-header')
 @section('content')
-<div class="container">
-    <div class="panel panel-default myPanel">
-        <div class="panel-heading">Login to Admin</div>
-        <div class="panel-body">
-            <form class="form-horizontal" role="form" method="POST" action="{{ $context->core->url('login') }}">
-                {{ csrf_field() }}
+<div class="section_header">
+    <div class="section_header_bg">
+        <div class="content">
+            <div class="intro">
+              <img src="{{ url('storage/media/image/logo_metronic_1.png') }}" alt="Metronic">
+              <div class="intro__title">Login to Admin</div>
 
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                    <div class="col-md-12">
-                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                        @if ($errors->has('email'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                        @endif
-                    </div>
-                </div>
-
-                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                    <label for="password" class="col-md-4 control-label">Password</label>
-
-                    <div class="col-md-12">
-                        <input id="password" type="password" class="form-control" name="password" required>
-
-                        @if ($errors->has('password'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                        @endif
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-12 col-md-offset-4">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-8 col-md-offset-4">
-                        <button type="submit" class="btn btn-primary">
-                            Login
-                        </button>
-
-                        <a class="btn btn-link" href="{{ $context->core->url('password/reset') }}">
-                            Forgot Your Password?
-                        </a>
-                        <br>
-                        <br>
-                        <a href="{{ $context->core->url('employee/create') }}">Create an Employee</a>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
+    </div>
+    <div class="login__form">
+      <div class="panel panel-default myPanel">
+        <div class="panel-body">
+
+          <form class="m-login__form m-form" action="{{ $context->core->url('login') }}" method="post" role="form">
+            {{ csrf_field() }}
+              <div class="form-group m-form__group">
+  							<input class="form-control m-input" type="email" placeholder="Email" name="email" autocomplete="off">
+  						</div>
+  						<div class="form-group m-form__group">
+  							<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
+  						</div>
+  						<div class="row m-login__form-sub">
+  							<div class="col m--align-left">
+  								<label class="m-checkbox m-checkbox--focus">
+  									<input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
+  									Remember me
+  									<span></span>
+  								</label>
+  							</div>
+  							<div class="col m--align-right">
+  								<a href="javascript:;" id="m_login_forget_password" class="m-link">
+  									Forget Password ?
+  								</a>
+  							</div>
+  						</div>
+  						<div class="m-login__form-action">
+  							<button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">
+  								Sign In
+  							</button>
+  						</div>
+					</form>
+        </div>
+    </div>
     </div>
 </div>
 @endsection

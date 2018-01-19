@@ -29,7 +29,9 @@
             @yield('content')
             @extends('layouts.footer')
         </div>
-
+        <script src="{{ $js_url }}/vendors.bundle.js"></script>
+        <script src="{{ $js_url }}/scripts.bundle.js"></script>
+        <script src="{{ $js_url }}/login.js"></script>
         @foreach ($js_files as $js)
             <script src="{{ $js }}"></script>
         @endforeach
