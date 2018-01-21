@@ -14,31 +14,47 @@ class AdminController extends Controller
 
     public $context;
 
+    public $section = 'Authority Zone';
+
     public $css_files = array();
 
     public $js_files = array();
+
+    public $page = array();
 
     public function __construct()
     {
         $this->context = Context::getContext();
         $this->context->core->scope = $this->scope;
-        $this->getCSS();
-        $this->getJS();
+        $this->page['title'] = 'Admin Zone';
+        $this->page['panel'] = 'enable';
+        $this->page['meta_title'] = 'Admin Zone';
+        $this->page['meta_description'] = 'Admin description';
+        $this->page['meta_keywords'] = '';
+        $this->page['head'] = 'Default Page';
     }
 
     public function template($view, $data = array())
     {
-        View::addLocation(config('settings.admin_theme_abs'));
+      View::addLocation(config('settings.admin_theme_abs'));
+
+        if (!isset($this->page['action_links'])) {
+          $this->page['action_links'] = [];
+        }
 
         $default = [
             'page_title' => $this->page_title,
+            'page' => $this->page,
+            'action_links' => $this->page['action_links'],
             'context' => $this->context,
-            'css_files' => $this->css_files,
-            'js_files' => $this->js_files,
+            'css_files' => $this->getCSS(),
+            'js_files' => $this->getJS(),
             'css_url' => url(config('settings.admin_css_url')),
             'js_url' => url(config('settings.admin_js_url')),
             'sidebar_menu' => $this->getAdminMenu(),
-            'media_url' => url(config('settings.media_url'))
+            'media_url' => url(config('settings.media_url')),
+            'section' => $this->section,
+            'form' => $this->context->form,
         ];
 
         $data = array_merge($data, $default);
@@ -72,7 +88,8 @@ class AdminController extends Controller
     public function getAdminMenu()
     {
       $co['base'] = [
-        'text' => 'Base'
+        'text' => 'Base',
+        'icon' => '<i class="m-menu__link-icon flaticon-layers"></i>'
         ];
 
           $co['base']['child'][] = [
@@ -81,12 +98,23 @@ class AdminController extends Controller
           ];
 
       $tl['tools'] = [
-        'text' => 'Tools'
+        'text' => 'Tools',
+        'icon' => '<i class="m-menu__link-icon flaticon-interface-3"></i>'
         ];
 
           $tl['tools']['child'][] = [
             'slug' => 'components/base/state.html',
             'text' => 'Tools'
+          ];
+
+      $tl['employee'] = [
+        'text' => 'Employees',
+        'icon' => '<i class="m-menu__link-icon flaticon-users"></i>'
+        ];
+
+          $tl['employee']['child'][] = [
+            'slug' => 'employee/list',
+            'text' => 'Employees'
           ];
 
       //Main menu defined here
@@ -111,5 +139,20 @@ class AdminController extends Controller
     public function addJS($file, $priority = 0)
     {
         $this->js_files[] = $file;
+    }
+
+    public function changeStatus($id)
+    {
+        $statusObj = $this->statusObj->find($id);
+
+        $status = 1;
+        if (isset($statusObj->status) && $statusObj->status) {
+            $status = 0;
+          }
+
+          $statusObj->status = $status;
+          $statusObj->save();
+
+        return json('success','Status Change!');
     }
 }

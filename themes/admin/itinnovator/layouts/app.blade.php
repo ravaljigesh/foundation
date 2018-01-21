@@ -10,6 +10,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="{{ url('storage/media/favicon.ico') }}">
       <!-- CSRF Token -->
       <meta name="csrf-token" content="{{ csrf_token() }}">
       <title>{{ $page_title }} - Admin</title>
@@ -79,199 +80,29 @@
                   <div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
                      <!-- BEGIN: Horizontal Menu -->
                      <div id="m_header_menu" class="m-header-menu m-header-menu--skin-light m-header-menu--submenu-skin-light ">
-                        <ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
-                           <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
-                              <a href="#" class="m-menu__link m-menu__toggle">
-                              <i class="m-menu__link-icon flaticon-add"></i>
-                              <span class="m-menu__link-text">
-                              Actions
-                              </span>
-                              <i class="m-menu__hor-arrow la la-angle-down"></i>
-                              <i class="m-menu__ver-arrow la la-angle-right"></i>
-                              </a>
-                              <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
-                                 <span class="m-menu__arrow m-menu__arrow--adjust"></span>
-                                 <ul class="m-menu__subnav">
-                                    <li class="m-menu__item " aria-haspopup="true">
-                                       <a href="header/actions.html" class="m-menu__link ">
-                                       <i class="m-menu__link-icon flaticon-file"></i>
-                                       <span class="m-menu__link-text">
-                                       Create New Post
-                                       </span>
-                                       </a>
-                                    </li>
-                                    <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                       <a href="header/actions.html" class="m-menu__link ">
-                                       <i class="m-menu__link-icon flaticon-diagram"></i>
-                                       <span class="m-menu__link-title">
-                                       <span class="m-menu__link-wrap">
-                                       <span class="m-menu__link-text">
-                                       Generate Reports
-                                       </span>
-                                       <span class="m-menu__link-badge">
-                                       <span class="m-badge m-badge--success">
-                                       2
-                                       </span>
-                                       </span>
-                                       </span>
-                                       </span>
-                                       </a>
-                                    </li>
-                                    <li class="m-menu__item  m-menu__item--submenu" data-menu-submenu-toggle="hover" data-redirect="true" aria-haspopup="true">
-                                       <a href="#" class="m-menu__link m-menu__toggle">
-                                       <i class="m-menu__link-icon flaticon-business"></i>
-                                       <span class="m-menu__link-text">
-                                       Manage Orders
-                                       </span>
-                                       <i class="m-menu__hor-arrow la la-angle-right"></i>
-                                       <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                       </a>
-                                       <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
-                                          <span class="m-menu__arrow "></span>
-                                          <ul class="m-menu__subnav">
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Latest Orders
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Pending Orders
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Processed Orders
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Delivery Reports
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Payments
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Customers
-                                                </span>
-                                                </a>
-                                             </li>
-                                          </ul>
-                                       </div>
-                                    </li>
-                                    <li class="m-menu__item  m-menu__item--submenu" data-menu-submenu-toggle="hover" data-redirect="true" aria-haspopup="true">
-                                       <a href="#" class="m-menu__link m-menu__toggle">
-                                       <i class="m-menu__link-icon flaticon-chat-1"></i>
-                                       <span class="m-menu__link-text">
-                                       Customer Feedbacks
-                                       </span>
-                                       <i class="m-menu__hor-arrow la la-angle-right"></i>
-                                       <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                       </a>
-                                       <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
-                                          <span class="m-menu__arrow "></span>
-                                          <ul class="m-menu__subnav">
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Customer Feedbacks
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Supplier Feedbacks
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Reviewed Feedbacks
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Resolved Feedbacks
-                                                </span>
-                                                </a>
-                                             </li>
-                                             <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                                <a href="header/actions.html" class="m-menu__link ">
-                                                <span class="m-menu__link-text">
-                                                Feedback Reports
-                                                </span>
-                                                </a>
-                                             </li>
-                                          </ul>
-                                       </div>
-                                    </li>
-                                    <li class="m-menu__item " data-redirect="true" aria-haspopup="true">
-                                       <a href="header/actions.html" class="m-menu__link ">
-                                       <i class="m-menu__link-icon flaticon-users"></i>
-                                       <span class="m-menu__link-text">
-                                       Register Member
-                                       </span>
-                                       </a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </li>
-                        </ul>
+                       <div class=" m-portlet__head-title">
+                          <h2 class="h-portlet__head-text">{{ $section }}</h2>
+                       </div>
                      </div>
                      <!-- END: Horizontal Menu -->
                      <!-- BEGIN: Topbar -->
                      <div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
                         <div class="m-stack__item m-topbar__nav-wrapper">
                            <ul class="m-topbar__nav m-nav m-nav--inline">
-                              <li class="
-                                 m-nav__item m-dropdown m-dropdown--large m-dropdown--arrow m-dropdown--align-center m-dropdown--mobile-full-width m-dropdown--skin-light	m-list-search m-list-search--skin-light" data-dropdown-toggle="click" data-dropdown-persistent="true" id="m_quicksearch" data-search-type="dropdown">
-                                 <a href="#" class="m-nav__link m-dropdown__toggle">
-                                 <span class="m-nav__link-icon">
-                                 <i class="flaticon-search-1"></i>
-                                 </span>
-                                 </a>
-                                 <div class="m-dropdown__wrapper">
-                                    <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
-                                    <div class="m-dropdown__inner ">
-                                       <div class="m-dropdown__header">
-                                          <form class="m-list-search__form">
-                                             <div class="m-list-search__form-wrapper">
-                                                <span class="m-list-search__form-input-wrapper">
-                                                <input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search...">
-                                                </span>
-                                                <span class="m-list-search__form-icon-close" id="m_quicksearch_close">
-                                                <i class="la la-remove"></i>
-                                                </span>
-                                             </div>
-                                          </form>
-                                       </div>
-                                       <div class="m-dropdown__body">
-                                          <div class="m-dropdown__scrollable m-scrollable" data-scrollable="true" data-max-height="300" data-mobile-max-height="200">
-                                             <div class="m-dropdown__content"></div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </li>
+                             @if (isset($action_links) && count($action_links))
+                               <li class="m-nav__item">
+                                  <div class="action-bar">
+                                    @foreach ($action_links as $link)
+                                    <a class="m-nav__link m-dropdown__toggle" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : $context->core->url($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : $context->core->url($link['slug'])) }}">
+                                      @if (isset($link['icon']))
+                                        {!! $link['icon'] !!}
+                                      @endif
+                                      {{ $link['text'] }}
+                                    </a>
+                                    @endforeach
+                                  </div>
+                               </li>
+                              @endif
                               <li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width" data-dropdown-toggle="click" data-dropdown-persistent="true">
                                  <a href="#" class="m-nav__link m-dropdown__toggle" id="m_topbar_notification_icon">
                                  <span class="m-nav__link-badge m-badge m-badge--dot m-badge--dot-small m-badge--danger"></span>
@@ -282,7 +113,7 @@
                                  <div class="m-dropdown__wrapper">
                                     <span class="m-dropdown__arrow m-dropdown__arrow--center _hNotify"></span>
                                     <div class="m-dropdown__inner">
-                                       <div class="m-dropdown__header m--align-center" style="background: url(../storage/media/image/notification_bg.jpg); background-size: cover;">
+                                       <div class="m-dropdown__header m--align-center" style="background: url(../../storage/media/image/notification_bg.jpg); background-size: cover;">
                                           <span class="m-dropdown__header-title">
                                           9 New
                                           </span>
@@ -493,7 +324,7 @@
                                  <div class="m-dropdown__wrapper">
                                     <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
                                     <div class="m-dropdown__inner">
-                                       <div class="m-dropdown__header m--align-center" style="background: url(../storage/media/image/user_profile_bg.jpg); background-size: cover;">
+                                       <div class="m-dropdown__header m--align-center" style="background: url(../../storage/media/image/user_profile_bg.jpg); background-size: cover;">
                                           <div class="m-card-user m-card-user--skin-dark">
                                              <div class="m-card-user__pic">
                                                 <img src="{{ url('storage/media/image/user5.jpg') }}" class="m--img-rounded m--marginless" alt="" />
@@ -568,7 +399,7 @@
                                                 </li>
                                                 <li class="m-nav__separator m-nav__separator--fit"></li>
                                                 <li class="m-nav__item">
-                                                   <a href="{{ $context->core->url('logout') }}" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+                                                   <a href="{{ AdminURL('logout') }}" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
                                                    Logout
                                                    </a>
                                                 </li>
@@ -597,7 +428,7 @@
                <!-- BEGIN: Aside Menu -->
                <div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500">
                   <ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
-                     <li class="m-menu__item  m-menu__item--active" aria-haspopup="true">
+                     <li class="m-menu__item" aria-haspopup="true">
                         <a href="{{ AdminURL('dashboard') }}" class="m-menu__link ">
                         <i class="m-menu__link-icon flaticon-line-graph"></i>
                         <span class="m-menu__link-title">
@@ -622,7 +453,11 @@
                           @foreach ($menu['menu'] as $key => $m)
                              <li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
                                 <a href="#" class="m-menu__link m-menu__toggle">
-                                <i class="m-menu__link-icon flaticon-layers"></i>
+                                    @if (isset($m['icon']))
+                                      {!! $m['icon'] !!}
+                                    @else
+                                      <i class="m-menu__link-icon flaticon-layers"></i>
+                                    @endif
                                     <span class="m-menu__link-text">
                                        {{ $m['text'] }}
                                     </span>
@@ -663,31 +498,43 @@
                <!-- END: Aside Menu -->
             </div>
             <!-- END: Left Aside -->
-            <div class="m-grid__item m-grid__item--fluid m-wrapper">
-               <!-- BEGIN: Subheader -->
-               <div class="m-subheader ">
-                  <div class="d-flex align-items-center">
-                     <div class="mr-auto">
-                        <h3 class="m-subheader__title ">
-                           Dashboard
-                        </h3>
-                     </div>
-                     <div>
-                        <span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
-                        <span class="m-subheader__daterange-label">
-                        <span class="m-subheader__daterange-title"></span>
-                        <span class="m-subheader__daterange-date m--font-brand"></span>
-                        </span>
-                        <a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-                          <i class="la la-angle-down"></i>
-                        </a>
-                        </span>
-                     </div>
-                  </div>
-               </div>
-               <!-- END: Subheader -->
+            <div class="m-grid__item m-grid__item--fluid">
                <div class="m-content">
-                  @yield('content')
+                 <div class="m-portlet">
+                   <div class="m-portlet m-portlet--mobile">
+                       <div class="m-portlet__head">
+                         <div class="m-portlet__head-caption">
+                           <div class="m-portlet__head-title">
+                             <h3 class="m-portlet__head-text">
+                               {{ $page['head'] }}
+                             </h3>
+                           </div>
+                         </div>
+                         @if (isset($action_links) && count($action_links))
+                          <div class="m-portlet__head-tools">
+                           <ul class="m-portlet__nav">
+                             <li class="m-portlet__nav-item">
+                                @foreach ($action_links as $link)
+                                 <div class="action-bar">
+                                    <a class="m-nav__link m-dropdown__toggle" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : $context->core->url($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : $context->core->url($link['slug'])) }}">
+                                      @if (isset($link['icon']))
+                                        {!! $link['icon'] !!}
+                                      @endif
+                                      {{ $link['text'] }}
+                                    </a>
+                                  </div>
+                                 @endforeach
+                               </li>
+                             </ul>
+                           </div>
+                         @endif
+                       </div>
+                       <div class="m-portlet__body">
+                         @yield('content')
+                       </div>
+                     </div>
+                   </div>
+                 </div>
                </div>
             </div>
          </div>
