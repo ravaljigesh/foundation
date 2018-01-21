@@ -439,3 +439,18 @@ function getNumber($string)
 {
     return filter_var($string, FILTER_SANITIZE_NUMBER_INT);
 }
+
+function ps($string)
+{
+    $string = str_replace('(', '', $string);
+    $string = str_replace(')', '', $string);
+    $string = str_replace('-', '', $string);
+    $string = str_replace(' ', '', $string);
+    return $string;
+}
+
+function psa($string)
+{
+    $string = str_replace('-', '', $string);
+    return $string;
+}

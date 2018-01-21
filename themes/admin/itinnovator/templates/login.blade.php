@@ -14,13 +14,27 @@
       <div class="panel panel-default myPanel">
         <div class="panel-body">
 
-          <form class="m-login__form m-form" action="{{ $context->core->url('login') }}" method="post" role="form">
+          <form class="m-login__form m-form" action="{{ AdminURL('login') }}" method="post" role="form">
             {{ csrf_field() }}
-              <div class="form-group m-form__group">
+              <div class="form-group m-form__group {{ $errors->has('email') ? ' has-error' : '' }}">
   							<input class="form-control m-input" type="email" placeholder="Email" name="email" autocomplete="off">
+                <div id="email-error" class="form-control-feedback">
+                  @if ($errors->has('email'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                  @endif
+                </div>
   						</div>
-  						<div class="form-group m-form__group">
+  						<div class="form-group m-form__group {{ $errors->has('password') ? ' has-error' : '' }}">
   							<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
+                <div id="password-error" class="form-control-feedback">
+                  @if ($errors->has('password'))
+                  <span class="help-block">
+                      <strong>{{ $errors->first('password') }}</strong>
+                  </span>
+                  @endif
+                </div>
   						</div>
   						<div class="row m-login__form-sub">
   							<div class="col m--align-left">

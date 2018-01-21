@@ -15,6 +15,8 @@ class Context
 
     protected $form;
 
+    protected $user;
+
     protected $link;
 
     protected $admin_user;
@@ -105,6 +107,17 @@ class Context
     public function getLang()
     {
         return $this->lang = new \App\Objects\Lang;
+    }
+
+
+    /**
+     * Get the Users
+     *
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user = new \App\Objects\User;
     }
 
 }

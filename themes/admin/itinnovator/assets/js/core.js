@@ -1,50 +1,69 @@
 $(document).ready(function () {
-  $(document).on('submit', '.myForm', function (e) {
-        $sub_button = 'button[type=submit]';
-        e.preventDefault();
-        if (!formValidate($(this))) {
-            return false;
+  $(document).on('focus', '.mdl-input', function () {
+    $(this).parent().addClass('is-focused');
+  });
+
+  $('.mdl-input').each(function () {
+    if ($(this).val().length > 0) {
+      $(this).parent().addClass('is-focused');
+    }
+  });
+
+  $(document).on('blur', '.mdl-input', function () {
+    val = $(this).val();
+    if (val.length > 0) {
+      $(this).parent().addClass('is-focused');
+    } else {
+      $(this).parent().removeClass('is-focused');
+    }
+  });
+});
+
+
+$(document).on('submit', '.myForm', function (e) {
+    $sub_button = 'button[type=submit]';
+    e.preventDefault();
+    if (!formValidate($(this))) {
+        return false;
+    }
+
+    $($sub_button).addClass('m-loader');
+    url = window.location;
+
+    if ($(this).attr('action')) {
+      url = $(this).attr('action');
+    }
+
+    $.post(url, $(this).serialize(), '', 'json').always(function (data) {
+        if (data.status == 'success') {
+              location.reload();
+              toastr.success(data.message);
+            // $('body').load(window.location + ' .big-container', function () {
+            // });
         }
 
-        $($sub_button).addClass('loadingi');
-        url = window.location;
-
-        if ($(this).attr('action')) {
-          url = $(this).attr('action');
+        if (data.status == 'redirect') {
+            toastr.success('Success!');
+            window.location = data.message;
+            // redirect(data.message);
         }
 
-        $.post(url, $(this).serialize(), '', 'json').always(function (data) {
-            if (data.status == 'success') {
-                  location.reload();
-                  toastr.success(data.message);
-                // $('body').load(window.location + ' .big-container', function () {
-                // });
-            }
+        if (data.status == 'back') {
+            window.location = document.referrer;
+        }
 
-            if (data.status == 'redirect') {
-                toastr.success('Success!');
-                window.location = data.message;
-                // redirect(data.message);
-            }
+        if (data.status == 'refresh') {
+            // location.reload();
+        }
 
-            if (data.status == 'back') {
-                window.location = document.referrer;
-            }
-
-            if (data.status == 'refresh') {
-                // location.reload();
-            }
-
-            if (data.status == 'error') {
-                toastr.error(data.message);
-            }
-            $($sub_button).removeClass('loadingi');
-        }).fail(function (data) {
+        if (data.status == 'error') {
             toastr.error(data.message);
-            $($sub_button).removeClass('loadingi');
-        });
+        }
+        $($sub_button).removeClass('m-loader');
+    }).fail(function (data) {
+        toastr.error(data.message);
+        $($sub_button).removeClass('m-loader');
     });
-
 });
 function formValidate(form)
 {
