@@ -88,8 +88,6 @@ class ConfigurationController extends AdminController
   public function initClearCache()
   {
       Cache::flush();
-      // $this->flash('success', 'Cache Clear');
-      // return json('redirect', AdminURL('configuration'));
       return jsonResponse('success', 'Cache Clear');
   }
 

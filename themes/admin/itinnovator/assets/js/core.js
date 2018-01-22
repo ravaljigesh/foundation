@@ -4,8 +4,6 @@ $(document).ready(function () {
   });
 
   $('#meta_keywords, #ADMIN_EMAIL').tagsinput();
-
-  // $('[name=phone], [name=mobile]').mask('(000) 000-0000');
   $('[name=phone], [name=mobile]').inputmask('(999) 999-9999');
 
   $('.mdl-input').each(function () {
@@ -22,6 +20,133 @@ $(document).ready(function () {
       $(this).parent().removeClass('is-focused');
     }
   });
+
+  $(document).on('click', '.javascript', function (e) {
+      e.preventDefault();
+      toggle = $(this).attr('toggle');
+      hide = $(this).attr('hide');
+      show = $(this).attr('show');
+      scroll = $(this).attr('scroll');
+      url = $(this).attr('location');
+      remove = $(this).attr('remove');
+      content = $(this).attr('content');
+      con = $(this).attr('confirm_msg');
+      method = $(this).attr('method');
+
+      if (remove) {
+        $(remove).remove();
+      }
+
+      if (hide) {
+      }
+      $(hide).slideUp('fast');
+
+      if (toggle) {
+        $(toggle).slideToggle('fast');
+      }
+
+      if (show) {
+        $(show).slideDown('fast');
+      }
+
+      if (scroll) {
+        var animate_scroll = $('html, body').stop(!0,!1).animate({
+          scrollTop:$(scroll).offset().top - 50},
+          500);
+          clearTimeout(animate_scroll);
+        }
+
+        if (url) {
+          // NProgress.configure({ showSpinner: true });
+          // NProgress.start();
+          if (con) {
+            if (confirm(con)) {
+              confirm(con);
+            } else {
+              // NProgress.done();
+              return true;
+            }
+          }
+          div_to_update = $(this).attr('div_to_update');
+          if (div_to_update) {
+            element = div_to_update;
+          } else {
+            element = $(this).attr('id');
+          }
+          if (method && method == 'post') {
+            data = $(this).attr('data');
+            arr = data.split(',');
+            post = {};
+            post['_token'] = CSRF;
+            post['element'] = $(this).attr('id');
+            $.each(arr, function (index, value) {
+              post[value] = $('#' + value).val();
+            });
+            $(this).addClass('m-loader');
+            $.post(url, post, '', 'json').always(function (data) {
+              if (data.status == 'html') {
+                ele = data.field;
+                element = $('#' + ele);
+                div_to_update = element.attr('div_to_update');
+                if (div_to_update) {
+                  $('#' + div_to_update).html(data.message);
+                } else {
+                  element.html(data.message);
+                }
+              }
+
+              if (data.status == 'success') {
+                toastr.success(data.message);
+                el = $('#' + data.field);
+                el.removeClass('m-loader');
+                cb = el.attr('callback');
+                if (cb) {
+                  window[cb]();
+                }
+              }
+
+              if (data.status == 'error') {
+                el = $('#' + data.field);
+                el.removeClass('m-loader');
+                toastr.error(data.message);
+              }
+
+              if (data.status == 'redirect') {
+                redirect(data.message);
+              }
+
+              // NProgress.done();
+            });
+          } else {
+            $.get(url, {element: element}, '', 'json').always(function (data) {
+              if (data.status == 'html') {
+                ele = data.field;
+                element = $('#' + ele);
+                div_to_update = element.attr('div_to_update');
+                if (div_to_update) {
+                  $('#' + div_to_update).html(data.message);
+                } else {
+                  element.html(data.message);
+                }
+              }
+
+              if (data.status == 'success') {
+                toastr.success(data.message);
+              }
+
+              if (data.status == 'error') {
+                toastr.error(data.message);
+              }
+
+              if (data.status == 'redirect') {
+                redirect(data.message);
+              }
+
+              // NProgress.done();
+            });
+          }
+        }
+    });
 });
 
 

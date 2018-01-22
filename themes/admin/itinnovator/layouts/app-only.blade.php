@@ -337,16 +337,11 @@
                                                    <a href="header/profile.html" class="m-nav__link">
                                                    <i class="m-nav__link-icon flaticon-profile-1"></i>
                                                    <span class="m-nav__link-title">
-                                                   <span class="m-nav__link-wrap">
-                                                   <span class="m-nav__link-text">
-                                                   My Profile
-                                                   </span>
-                                                   <span class="m-nav__link-badge">
-                                                   <span class="m-badge m-badge--success">
-                                                   2
-                                                   </span>
-                                                   </span>
-                                                   </span>
+                                                     <span class="m-nav__link-wrap">
+                                                       <span class="m-nav__link-text">
+                                                       My Profile
+                                                       </span>
+                                                     </span>
                                                    </span>
                                                    </a>
                                                 </li>
@@ -363,23 +358,6 @@
                                                    <i class="m-nav__link-icon flaticon-chat-1"></i>
                                                    <span class="m-nav__link-text">
                                                    Messages
-                                                   </span>
-                                                   </a>
-                                                </li>
-                                                <li class="m-nav__separator m-nav__separator--fit"></li>
-                                                <li class="m-nav__item">
-                                                   <a href="header/profile.html" class="m-nav__link">
-                                                   <i class="m-nav__link-icon flaticon-info"></i>
-                                                   <span class="m-nav__link-text">
-                                                   FAQ
-                                                   </span>
-                                                   </a>
-                                                </li>
-                                                <li class="m-nav__item">
-                                                   <a href="header/profile.html" class="m-nav__link">
-                                                   <i class="m-nav__link-icon flaticon-lifebuoy"></i>
-                                                   <span class="m-nav__link-text">
-                                                   Support
                                                    </span>
                                                    </a>
                                                 </li>

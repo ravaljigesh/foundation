@@ -30,8 +30,8 @@
         {!! $form->button2([
           'type' => 'submit',
           'class' => '',
-          'id' => 'save_user',
-          'text' => 'Save User'
+          'id' => 'save_configuration',
+          'text' => 'Save Configuration'
           ]); !!}
   {!! $form->end() !!}
 @endsection
