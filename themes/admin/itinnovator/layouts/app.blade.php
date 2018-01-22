@@ -93,7 +93,7 @@
                                <li class="m-nav__item">
                                   <div class="action-bar">
                                     @foreach ($action_links as $link)
-                                    <a class="m-nav__link m-dropdown__toggle" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}">
+                                    <a class="m-nav__link m-dropdown__toggle {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}">
                                       @if (isset($link['icon']))
                                         {!! $link['icon'] !!}
                                       @endif
@@ -333,7 +333,7 @@
                                                 <span class="m-card-user__name m--font-weight-500">
                                                 Mark Andre
                                                 </span>
-                                                <a href="" class="m-card-user__email m--font-weight-300 m-link">
+                                                <a href="" class="m-dropdown__header-subtitle m--font-weight-300 m-link">
                                                 mark.andre@gmail.com
                                                 </a>
                                              </div>
@@ -351,16 +351,11 @@
                                                    <a href="header/profile.html" class="m-nav__link">
                                                    <i class="m-nav__link-icon flaticon-profile-1"></i>
                                                    <span class="m-nav__link-title">
-                                                   <span class="m-nav__link-wrap">
-                                                   <span class="m-nav__link-text">
-                                                   My Profile
-                                                   </span>
-                                                   <span class="m-nav__link-badge">
-                                                   <span class="m-badge m-badge--success">
-                                                   2
-                                                   </span>
-                                                   </span>
-                                                   </span>
+                                                     <span class="m-nav__link-wrap">
+                                                       <span class="m-nav__link-text">
+                                                       My Profile
+                                                       </span>
+                                                     </span>
                                                    </span>
                                                    </a>
                                                 </li>
@@ -377,23 +372,6 @@
                                                    <i class="m-nav__link-icon flaticon-chat-1"></i>
                                                    <span class="m-nav__link-text">
                                                    Messages
-                                                   </span>
-                                                   </a>
-                                                </li>
-                                                <li class="m-nav__separator m-nav__separator--fit"></li>
-                                                <li class="m-nav__item">
-                                                   <a href="header/profile.html" class="m-nav__link">
-                                                   <i class="m-nav__link-icon flaticon-info"></i>
-                                                   <span class="m-nav__link-text">
-                                                   FAQ
-                                                   </span>
-                                                   </a>
-                                                </li>
-                                                <li class="m-nav__item">
-                                                   <a href="header/profile.html" class="m-nav__link">
-                                                   <i class="m-nav__link-icon flaticon-lifebuoy"></i>
-                                                   <span class="m-nav__link-text">
-                                                   Support
                                                    </span>
                                                    </a>
                                                 </li>
@@ -516,7 +494,7 @@
                              <li class="m-portlet__nav-item">
                                 @foreach ($action_links as $link)
                                  <div class="action-bar">
-                                    <a class="m-nav__link m-dropdown__toggle" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}">
+                                    <a class="m-nav__link m-dropdown__toggle {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}">
                                       @if (isset($link['icon']))
                                         {!! $link['icon'] !!}
                                       @endif
