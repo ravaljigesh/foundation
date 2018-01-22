@@ -64,9 +64,9 @@ class AdminController extends Controller
 
     public function getCSS()
     {
-        // $this->addCSS('//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
         $this->addCSS($this->context->link->getCSSLink('vendors.bundle.css'));
         $this->addCSS($this->context->link->getCSSLink('style.bundle.css'));
+        $this->addCSS($this->context->link->getCSSLink('tagsinput.css', true));
         $this->addCSS($this->context->link->getCSSLink('style.css'));
 
         return $this->css_files;
@@ -74,11 +74,9 @@ class AdminController extends Controller
 
     public function getJS()
     {
-        // $this->addJS('//code.jquery.com/jquery-3.2.1.min.js');
-        // $this->addJS('//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js');
-        // $this->addJS('//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js');
         $this->addJS($this->context->link->getJSLink('vendors.bundle.js'));
         $this->addJS($this->context->link->getJSLink('scripts.bundle.js'));
+        $this->addJS($this->context->link->getJSLink('tagsinput.min.js', true));
         $this->addJS($this->context->link->getJSLink('dashboard.js'));
         $this->addJS($this->context->link->getJSLink('core.js'));
 
@@ -103,8 +101,8 @@ class AdminController extends Controller
         ];
 
           $tl['tools']['child'][] = [
-            'slug' => 'components/base/state.html',
-            'text' => 'Tools'
+            'slug' => 'configuration',
+            'text' => 'Configuration'
           ];
 
       $tl['employee'] = [

@@ -12,7 +12,8 @@
 
         <!-- Styles -->
         @foreach ($css_files as $css)
-        <link href="{{ $css }}" rel="stylesheet"> @endforeach
+          <link href="{{ $css }}" rel="stylesheet"> 
+        @endforeach
 
         <!-- Scripts -->
         <script>
@@ -28,9 +29,6 @@
         <div id="app">
             @yield('content')
         </div>
-        <script src="{{ $js_url }}/vendors.bundle.js"></script>
-        <script src="{{ $js_url }}/scripts.bundle.js"></script>
-        <script src="{{ $js_url }}/core.js"></script>
         @foreach ($js_files as $js)
             <script src="{{ $js }}"></script>
         @endforeach

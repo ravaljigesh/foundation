@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-only')
 @section('content')
   <div class="row">
     <div class="col-xl-12">

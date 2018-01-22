@@ -23,6 +23,8 @@ class Context
 
     protected $lang;
 
+    protected $configuration;
+
     public function __get($property)
     {
         $property = explode('_', $property);
@@ -118,6 +120,16 @@ class Context
     public function getUser()
     {
         return $this->user = new \App\Objects\User;
+    }
+
+    /**
+     * Get the Configuration
+     *
+     * @return mixed
+     */
+    public function getConfiguration()
+    {
+        return $this->configuration = new \App\Objects\Configuration;
     }
 
 }

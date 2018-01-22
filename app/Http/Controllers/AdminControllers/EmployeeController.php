@@ -37,7 +37,7 @@ class EmployeeController extends AdminController
         ]);
     }
 
-    public function initCreate($id = null)
+    public function initContentCreate($id = null)
     {
         $admin_user = $this->context->admin_user;
         if ($id) {
@@ -47,7 +47,7 @@ class EmployeeController extends AdminController
         $this->page['action_links'][] = [
           'text' => 'Employees',
           'slug' => 'employee/list',
-          'icon' => '<i class="la la-mail-reply"></i>'
+          'icon' => '<i class="la la-mail-reply"></i>',
         ];
 
         $this->page['head'] = 'Employee Create';
