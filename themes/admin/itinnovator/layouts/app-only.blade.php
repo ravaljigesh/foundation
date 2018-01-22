@@ -89,20 +89,6 @@
                      <div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
                         <div class="m-stack__item m-topbar__nav-wrapper">
                            <ul class="m-topbar__nav m-nav m-nav--inline">
-                             @if (isset($action_links) && count($action_links))
-                               <li class="m-nav__item">
-                                  <div class="action-bar">
-                                    @foreach ($action_links as $link)
-                                    <a class="m-nav__link m-dropdown__toggle" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}">
-                                      @if (isset($link['icon']))
-                                        {!! $link['icon'] !!}
-                                      @endif
-                                      {{ $link['text'] }}
-                                    </a>
-                                    @endforeach
-                                  </div>
-                               </li>
-                              @endif
                               <li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width" data-dropdown-toggle="click" data-dropdown-persistent="true">
                                  <a href="#" class="m-nav__link m-dropdown__toggle" id="m_topbar_notification_icon">
                                  <span class="m-nav__link-badge m-badge m-badge--dot m-badge--dot-small m-badge--danger"></span>
@@ -500,41 +486,7 @@
             <!-- END: Left Aside -->
             <div class="m-grid__item m-grid__item--fluid">
                <div class="m-content">
-                 <div class="m-portlet">
-                   <div class="m-portlet m-portlet--mobile">
-                       <div class="m-portlet__head">
-                         <div class="m-portlet__head-caption">
-                           <div class="m-portlet__head-title">
-                             <h3 class="m-portlet__head-text">
-                               {{ $page['head'] }}
-                             </h3>
-                           </div>
-                         </div>
-                         @if (isset($action_links) && count($action_links))
-                          <div class="m-portlet__head-tools">
-                           <ul class="m-portlet__nav">
-                             <li class="m-portlet__nav-item">
-                                @foreach ($action_links as $link)
-                                 <div class="action-bar">
-                                    <a class="m-nav__link m-dropdown__toggle" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}">
-                                      @if (isset($link['icon']))
-                                        {!! $link['icon'] !!}
-                                      @endif
-                                      {{ $link['text'] }}
-                                    </a>
-                                  </div>
-                                 @endforeach
-                               </li>
-                             </ul>
-                           </div>
-                         @endif
-                       </div>
-                       <div class="m-portlet__body">
-                         @yield('content')
-                       </div>
-                     </div>
-                   </div>
-                 </div>
+                     @yield('content')
                </div>
             </div>
          </div>

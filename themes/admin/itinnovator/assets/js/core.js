@@ -3,6 +3,11 @@ $(document).ready(function () {
     $(this).parent().addClass('is-focused');
   });
 
+  $('#meta_keywords, #ADMIN_EMAIL').tagsinput();
+
+  // $('[name=phone], [name=mobile]').mask('(000) 000-0000');
+  $('[name=phone], [name=mobile]').inputmask('(999) 999-9999');
+
   $('.mdl-input').each(function () {
     if ($(this).val().length > 0) {
       $(this).parent().addClass('is-focused');

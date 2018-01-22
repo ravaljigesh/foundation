@@ -18,9 +18,9 @@
             {{ csrf_field() }}
               <div class="form-group m-form__group {{ $errors->has('email') ? ' has-error' : '' }}">
   							<input class="form-control m-input" type="email" placeholder="Email" name="email" autocomplete="off">
-                <div id="email-error" class="form-control-feedback">
+                <div id="email-error" class="has-danger">
                   @if ($errors->has('email'))
-                    <span class="help-block">
+                    <span class="help-block form-control-feedback">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                   @endif
@@ -28,9 +28,9 @@
   						</div>
   						<div class="form-group m-form__group {{ $errors->has('password') ? ' has-error' : '' }}">
   							<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
-                <div id="password-error" class="form-control-feedback">
+                <div id="password-error" class="has-danger">
                   @if ($errors->has('password'))
-                  <span class="help-block">
+                  <span class="help-block form-control-feedback">
                       <strong>{{ $errors->first('password') }}</strong>
                   </span>
                   @endif
@@ -45,7 +45,7 @@
   								</label>
   							</div>
   							<div class="col m--align-right">
-  								<a href="javascript:;" id="m_login_forget_password" class="m-link">
+  								<a href="{{ AdminURL('password/reset') }}" id="m_login_forget_password" class="m-link">
   									Forget Password ?
   								</a>
   							</div>

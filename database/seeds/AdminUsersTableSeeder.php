@@ -16,7 +16,14 @@ class AdminUsersTableSeeder extends Seeder
             'name' => 'Jigesh Raval',
             'email' => 'jigeshraval89@gmail.com',
             'password' => bcrypt('ravalera1'),
-			'mobile' => '7405282053',
+			      'mobile' => '7405282053',
+        ]);
+
+        DB::table('admin_users')->insert([
+            'name' => 'Hardik Solanki',
+            'email' => 'hardik@itinnovator.com',
+            'password' => bcrypt('hardikera1'),
+			      'mobile' => '9033777859',
         ]);
     }
 }

@@ -257,4 +257,35 @@ class Form
         return $html;
     }
 
+    public function mdradio($name, $options = array(), $selected_value = null, $label = null, $inline = false)
+    {
+        $html = null;
+
+        $html = '<div class="col-md-12 col-lg-12 pl-0">';
+        $html .= '<div class="ml-1 '.($inline == true ? 'md-radio-inline' : '').' md-radio-list">';
+        if ($label)
+        {
+          $html .= '<label for="'.$name.'" class="margin-right-10 inline-block">'.$label.'</label>';
+        }
+
+        if ($inline == true) {
+          $html = '<div class="col-md-6 col-lg-6 padding-left-0">';
+          $html .= '<div class="md-radio-inline inline-block md-radio-list">';
+          $html .= '<label for="'.$name.'" class="margin-right-10">'.$label.'</label>';
+        }
+        if (count($options)) {
+            $html .='<div class="m-radio-list m-radio-inline">';
+            foreach ($options as $value => $option_name) {
+              $idfor = $name.$value;
+                $html .= '<label class=" m-radio m-radio--bold m-radio--state-brand"><input type="radio" id="'. $idfor .'" name="'. $name .'" class="radio" '.($value == $selected_value ? 'checked' : '').' value="'. $value .'">'. $option_name .'<span></sapn></label>';
+            }
+            $html .='</div>';
+        }
+
+        $html .='</div></div>';
+        $this->form[] = $html;
+        return $html;
+    }
+
+
 }
