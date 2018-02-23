@@ -15,14 +15,27 @@ class Context
 
     protected $form;
 
+    protected $user;
+
     protected $link;
 
     protected $admin_user;
 
     protected $lang;
 
+    protected $media;
+
+    protected $translate;
+
+    protected $configuration;
+
+    protected $component;
+
+    protected $component_fields;
+
     public function __get($property)
     {
+        $real_property = $property;
         $property = explode('_', $property);
         if (count($property)) {
           $new_property = '';
@@ -34,6 +47,11 @@ class Context
         $method = 'get'.ucfirst($property); // getStatus
         if (method_exists($this, $method)) {
           return $this->$method();
+        }
+
+        if (file_exists(base_path('app/Objects/' . ucfirst($property) . '.php'))) {
+          $class = '\App\Objects\\' . ucfirst($property);
+          return $this->block = new $class;
         }
     }
 
@@ -107,4 +125,55 @@ class Context
         return $this->lang = new \App\Objects\Lang;
     }
 
+
+    /**
+     * Get the Users
+     *
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user = new \App\Objects\User;
+    }
+
+    /**
+     * Get the Configuration
+     *
+     * @return mixed
+     */
+    public function getConfiguration()
+    {
+        // $foo = new ;
+        return $this->configuration = new \App\Objects\Configuration;
+    }
+
+    /**
+     * Get the Configuration
+     *
+     * @return mixed
+     */
+    public function getMedia()
+    {
+        return $this->media = new \App\Objects\Media;
+    }
+
+    /**
+     * Get the Configuration
+     *
+     * @return mixed
+     */
+    public function getTranslate()
+    {
+        return $this->media = new \App\Classes\Translate;
+    }
+
+    public function getComponent()
+    {
+        return $this->component = new \App\Objects\Component;
+    }
+
+    public function getComponentFields()
+    {
+      return $this->component_fields = new \App\Objects\ComponentFields;
+    }
 }

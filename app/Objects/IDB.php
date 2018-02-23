@@ -19,4 +19,20 @@ class IDB extends Model
         $this->primaryKey = $column;
         return $this->find($key);
     }
+
+    public function findByURL($url)
+    {
+        $this->primaryKey = 'url';
+        return $this->find($url);
+    }
+
+    public function check($key, $val)
+    {
+        $data = $this->where($key, $val);
+        if (isset($data->id) && $data->id) {
+          return true;
+        }
+
+        return false;
+    }
 }
