@@ -9,6 +9,7 @@ use Auth;
 
 class LoginController extends AdminController
 {
+
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -63,5 +64,18 @@ class LoginController extends AdminController
         Auth::guard('admins')->logout();
 
         return redirect($this->logoutRedirectTo);
+    }
+
+    /**
+     * Determine if the user has too many failed login attempts.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return bool
+     */
+    protected function hasTooManyLoginAttempts(Request $request)
+    {
+        return $this->limiter()->tooManyAttempts(
+            $this->throttleKey($request), 3, 30
+        );
     }
 }

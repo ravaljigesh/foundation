@@ -1,6 +1,7 @@
 <?php
 Route::group(['prefix' => 'authority'], function () {
     Route::group(['middleware' => ['admins']], function () {
+<<<<<<< HEAD
 				// Added from component controller
 				Route::get('block/add', 'AdminControllers\BlockController@initContentCreate');
 				Route::post('block/add', 'AdminControllers\BlockController@initProcessCreate');
@@ -41,6 +42,28 @@ Route::group(['prefix' => 'authority'], function () {
         Route::get('media/library', 'AdminControllers\MediaController@initGetLibrary');
         Route::get('media/library/{type}', 'AdminControllers\MediaController@initGetLibrary');
         Route::get('media/delete/{id_media}', 'AdminControllers\MediaController@initDeleting');
+=======
+      Route::get('dashboard', 'AdminControllers\DashboardController@initContent');
+      Route::get('employee/list', 'AdminControllers\EmployeeController@initListing');
+
+      //COnfiguration
+      Route::get('configuration', 'AdminControllers\ConfigurationController@initContentCreate');
+      Route::post('configuration', 'AdminControllers\ConfigurationController@initProcessCreate');
+
+      //Clear Cache
+      Route::get('clear/cache', 'AdminControllers\ConfigurationController@initClearCache');
+
+      //Media
+      Route::get('media', 'AdminControllers\MediaController@initListing');
+      Route::post('media', 'AdminControllers\MediaController@initCreating');
+      Route::post('media/save/embeded', 'AdminControllers\MediaController@initCreatingSaveEmbeded');
+      Route::post('media/save/cropped/{id_media}', 'AdminControllers\MediaController@initCreatingSaveCropped');
+      Route::post('media/save/{id_media}', 'AdminControllers\MediaController@initCreatingSave');
+      Route::get('media/library', 'AdminControllers\MediaController@initGetLibrary');
+      Route::get('media/library/{type}/{object_type}', 'AdminControllers\MediaController@initGetLibrary');
+      Route::get('media/delete/{id_media}', 'AdminControllers\MediaController@initDeleting');
+
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
     });
 
     Route::get('login', 'AdminControllers\LoginController@initContent');

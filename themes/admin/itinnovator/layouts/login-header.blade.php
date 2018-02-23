@@ -12,7 +12,11 @@
 
         <!-- Styles -->
         @foreach ($css_files as $css)
+<<<<<<< HEAD
           <link href="{{ $css }}" rel="stylesheet">
+=======
+          <link href="{{ $css }}" rel="stylesheet"> 
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
         @endforeach
 
         <!-- Scripts -->

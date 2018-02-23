@@ -238,7 +238,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Context' => App\Classes\Context::class,
-        'IDB' => App\Objects\IDB::class
+        'IDB' => App\Objects\IDB::class,
+        'Input' => Illuminate\Support\Facades\Input::class
     ],
 
 ];

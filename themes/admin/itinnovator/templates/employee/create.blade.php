@@ -1,67 +1,49 @@
-@extends('layouts.login-header')
+@extends('layouts.app')
 @section('content')
-    <div class="myPanel">
-        <div class="panel-heading">Create Employee</div>
-        <form class="form-horizontal" role="form" method="POST" action="{{ $context->core->url('employee/create') }}">
-            {{ csrf_field() }}
+  {!! $form->start('admin-user-create', 'myForm') !!}
+        {!! $form->mdtext([
+          'name' => 'name',
+          'label' => t('Name'),
+          'required' => true,
+          'value' => model($admin_user, 'name'),
+          ]) !!}
 
-            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                <label for="name" class="col-md-4 control-label">Name</label>
+        {!! $form->mdtext([
+          'name' => 'email',
+          'label' => t('Email'),
+          'required' => true,
+          'value' => model($admin_user, 'email'),
+          ]) !!}
 
-                <div class="col-md-12">
-                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+        {!! $form->mdtext([
+          'name' => 'mobile',
+          'type' => 'tel',
+          'label' => t('Mobile'),
+          'required' => true,
+          'value' => model($admin_user, 'mobile'),
+          ]) !!}
 
-                    @if ($errors->has('name'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('name') }}</strong>
-                        </span>
-                    @endif
-                </div>
-            </div>
+        @if ($id)
+          {!! $form->mdtext([
+            'name' => 'password',
+            'label' => t('Password'),
+            'required' => false,
+            ]) !!}
+        @else
 
-            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+        {!! $form->mdtext([
+          'name' => 'password',
+          'type'=> 'password',
+          'label' => t('Password'),
+          'required' => true,
+          ]) !!}
+        @endif
 
-                <div class="col-md-12">
-                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                    @if ($errors->has('email'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                    @endif
-                </div>
-            </div>
-
-            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                <label for="password" class="col-md-4 control-label">Password</label>
-
-                <div class="col-md-12">
-                    <input id="password" type="password" class="form-control" name="password" required>
-
-                    @if ($errors->has('password'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                    @endif
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                <div class="col-md-12">
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-12 col-md-offset-4">
-                    <button type="submit" class="btn btn-primary">
-                        Register
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
+        {!! $form->button2([
+          'type' => 'submit',
+          'class' => '',
+          'id' => 'save_user',
+          'text' => 'Save User'
+          ]); !!}
+  {!! $form->end() !!}
 @endsection

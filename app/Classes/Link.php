@@ -16,7 +16,7 @@ class Link
         }
 
         if (Context::getContext()->core->scope == 'front') {
-            return url(config('settings.admin_css_url')) . '/' . $css;
+            return url(config('settings.css_url')) . '/' . $css;
         }
 
         return url(config('settings.admin_css_url')) . '/' . $css;
@@ -36,7 +36,7 @@ class Link
             return url(config('settings.js_url')) . '/' . $js;
         }
 
-        return url(config('settings.js_url')) . '/' . $js;
+        return url(config('settings.admin_js_url')) . '/' . $js;
     }
 
     public function getImageURL($image = null)

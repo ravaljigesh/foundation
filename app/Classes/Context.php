@@ -23,6 +23,7 @@ class Context
 
     protected $lang;
 
+<<<<<<< HEAD
     protected $media;
 
     protected $translate;
@@ -33,6 +34,10 @@ class Context
 
     protected $component_fields;
 
+=======
+    protected $configuration;
+
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
     public function __get($property)
     {
         $real_property = $property;
@@ -143,6 +148,7 @@ class Context
      */
     public function getConfiguration()
     {
+<<<<<<< HEAD
         // $foo = new ;
         return $this->configuration = new \App\Objects\Configuration;
     }
@@ -176,4 +182,9 @@ class Context
     {
       return $this->component_fields = new \App\Objects\ComponentFields;
     }
+=======
+        return $this->configuration = new \App\Objects\Configuration;
+    }
+
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
 }

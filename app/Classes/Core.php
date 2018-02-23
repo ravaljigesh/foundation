@@ -40,6 +40,7 @@ class Core
 
         return (object) $fields;
     }
+<<<<<<< HEAD
 
     public function getUploadDir($type = 'image')
     {
@@ -67,4 +68,6 @@ class Core
 
         return $html;
     }
+=======
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
 }

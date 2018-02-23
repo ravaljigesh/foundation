@@ -11,12 +11,18 @@
 | Route Starts
 */
 
+<<<<<<< HEAD
 Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('jigesh', function () {
     return 'get now';
   });
 });
+=======
+Route::get('/', 'FrontControllers\UserController@initContent');
+
+Route::get('/home', 'FrontControllers\UserController@initContent');
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
 
 // Authentication Routes...
 Route::get('/login', 'FrontControllers\LoginController@showLoginForm')->name('login');

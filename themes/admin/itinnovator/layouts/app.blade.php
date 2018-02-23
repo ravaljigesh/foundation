@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+   Template Name: Itinnovator - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
+   Version: 1.0
+   Author: Hardiksolanki
+   Website: https://www.itinnovator.co/
+   -->
 <html lang="{{ config('app.locale') }}">
    <head>
       <meta charset="utf-8">
@@ -7,7 +13,11 @@
       <link rel="shortcut icon" href="{{ url('storage/media/favicon.ico') }}">
       <!-- CSRF Token -->
       <meta name="csrf-token" content="{{ csrf_token() }}">
+<<<<<<< HEAD
       <title>{{ $page['title'] }} - Admin</title>
+=======
+      <title>{{ $page_title }} - Admin</title>
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
       <meta name="description" content="Latest updates and statistic charts">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,8 +45,11 @@
       <!--end::Base Styles -->
       <link rel="shortcut icon" href="assets/demo/default/media/img/logo/favicon.ico" />
    </head>
+<<<<<<< HEAD
    @include('templates/media/modal-library')
    @include('templates/media/modal-media')
+=======
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
    <body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
       <!-- begin:: Page -->
       <div class="m-grid m-grid--hor m-grid--root m-page">
@@ -77,7 +90,11 @@
                      <!-- BEGIN: Horizontal Menu -->
                      <div id="m_header_menu" class="m-header-menu m-header-menu--skin-light m-header-menu--submenu-skin-light ">
                        <div class=" m-portlet__head-title">
+<<<<<<< HEAD
                           <h2 class="h-portlet__head-text">{{ (isset($component->name) ? $component->name : 'Admin') }}</h2>
+=======
+                          <h2 class="h-portlet__head-text">{{ $section }}</h2>
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
                        </div>
                      </div>
                      <!-- END: Horizontal Menu -->
@@ -488,6 +505,7 @@
                           <div class="m-portlet__head-tools">
                            <ul class="m-portlet__nav">
                              <li class="m-portlet__nav-item">
+<<<<<<< HEAD
                                <div class="action-bar">
                                   @foreach ($action_links as $link)
                                       <a class="m-nav__link m-dropdown__toggle {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}">
@@ -498,6 +516,18 @@
                                       </a>
                                    @endforeach
                                 </div>
+=======
+                                @foreach ($action_links as $link)
+                                 <div class="action-bar">
+                                    <a class="m-nav__link m-dropdown__toggle {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" target="{{ (isset($link['target']) && $link['target'] ? $link['target'] : '') }}" class="rounded-s action-link {{ (isset($link['class']) && $link['class'] ? $link['class'] : '') }}" location="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}" href="{{ (isset($link['link_type']) && $link['link_type'] == 'external' ? $link['slug'] : AdminURL($link['slug'])) }}">
+                                      @if (isset($link['icon']))
+                                        {!! $link['icon'] !!}
+                                      @endif
+                                      {{ $link['text'] }}
+                                    </a>
+                                  </div>
+                                 @endforeach
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
                                </li>
                              </ul>
                            </div>

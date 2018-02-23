@@ -335,6 +335,10 @@ function prepareHTML($html)
     return $core->buildHTML();
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
 function generateMedia($id, $mediaList, $type = 'image', $var_type = 'string')
 {
     if (!isset($mediaList)) {
@@ -344,6 +348,7 @@ function generateMedia($id, $mediaList, $type = 'image', $var_type = 'string')
     $ids = '';
     $t = '';
     $html = '<div id="'.$id.'_wrapper" class="preview-wrapper">';
+<<<<<<< HEAD
     $ids = implode(',', $mediaList->pluck('id')->toArray());
     if (count($mediaList) > 1) {
         foreach ($mediaList as $key => $media) {
@@ -354,6 +359,22 @@ function generateMedia($id, $mediaList, $type = 'image', $var_type = 'string')
           $html .= generateMediaHTML($media_opt);
         }
         $html .= generateMediaHTML($media_opt);
+=======
+    if (count($mediaList) > 1) {
+      foreach ($mediaList as $key => $media) {
+        $media_opt = $media;
+        if (!$media_opt) {
+          continue;
+        }
+
+        if ($ids) {
+          $ids .= ','.$media_opt->id;
+        } else {
+          $ids = ''.$media_opt->id;
+        }
+        $html .= generateMediaHTML($media_opt);
+      }
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
     } else {
       if (isset($mediaList[0])) {
         $m = $mediaList[0];
@@ -373,6 +394,10 @@ function generateMedia($id, $mediaList, $type = 'image', $var_type = 'string')
     return $html;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
 function generateMediaHTML($media_opt)
 {
     $type = $media_opt->type;
@@ -448,6 +473,7 @@ function psa($string)
     $string = str_replace('-', '', $string);
     return $string;
 }
+<<<<<<< HEAD
 
 function resize($path, $image, $size1, $size2)
 {
@@ -556,3 +582,5 @@ function c($data)
 
     return false;
 }
+=======
+>>>>>>> 893181fa759adf1e3540f458fe418bbad3dc6810
