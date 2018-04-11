@@ -12,6 +12,5 @@ npm-debug.log
 yarn-error.log
 .env
 app/c7e_conf/.htaccess
-.env.example
 .htaccess
 .env.example
