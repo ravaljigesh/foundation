@@ -11,9 +11,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    protected $obj;
+    protected $assign = array();
 
-    protected $component;
-
-    protected $request;
+    protected $assign_default = array();
 }

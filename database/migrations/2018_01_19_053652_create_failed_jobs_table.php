@@ -18,8 +18,8 @@ class CreateFailedJobsTable extends Migration
             $table->text('connection');
             $table->text('queue');
             $table->longText('payload');
-            $table->timestamps('failed_at');
-			$table->engine = 'InnoDB';
+            $table->longText('exception');
+            $table->timestamp('failed_at')->useCurrent();
         });
     }
 

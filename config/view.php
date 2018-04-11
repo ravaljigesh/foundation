@@ -14,7 +14,8 @@ return [
     */
 
     'paths' => [
-        base_path('themes')
+        resource_path('front/' . config('adlara.front_theme') . '/templates'),
+        resource_path('admin/' . config('adlara.admin_theme') . '/templates'),
     ],
 
     /*
